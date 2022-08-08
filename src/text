@@ -1,0 +1,111 @@
+
+1
+2 Design DB
+        createCustomer();
+          1.  UUID
+              userName
+              email
+
+          2.  UUID
+              userName
+              email
+              address ==> can accept more than one address
+              { streetNumber;
+                streetName;
+                additionalAddressLine;
+                String zipCode;
+                state;}
+
+
+        createProduct();
+        createCategory();
+        createBalance();
+        createDiscount();
+
+3  Create Product:
+
+- id, name, price, stock, remainingStock, category
+
+Create Category:
+- All categories can have some common things
+- Every category can have smthg unique as well
+
+- Electronic: id, name, calculate delivery time( plus 4 days), create category code(unique)
+- Furniture: id, name, calculate delivery time(plus 1 day), create category(same)
+- SkinCare : id, name, calculate delivery(now), create category(same)
+
+
+
+
+4. Create Balance
+
+Customer can have 2 kinds of balance in their account: Customer Balance, GiftCardBalance
+
+CustomerBalance: customerId, balance, increase balance with additional amount
+GiftCardBalance: customerId, balance, increase the balance with additional amount + 10%
+
+
+
+
+
+5. Create Discount
+
+Amount based Discount: discountId, name, threshold amount, discount amount, need to calculate final amount after discount
+
+Rate Based Discount: discount id, name, discount rate, threshold amount, need to calculate final amount after discount
+
+
+
+
+
+
+
+****  Main ===> Select Customer:
+                    Type 0 for customer: ozzy@gmail.com
+                    Type 1 for customer: mike@gmail.com
+
+
+
+6. Create menu items
+{"List categories", "List Product", "List Discounts",
+                "See Balance", "Add Balance", "Place an order",
+                "See Cart", "See order details", "See your addresses", "Close App"};
+
+                case 0: List categories: category code, category name
+                case 1: List products : product name, product category name
+                case 2: list discounts
+                case 3: see balance i.findCustomerBalance
+                                    ii. findGiftCardBalance
+                        find total balance
+                        customer balance
+                        gift card balance of each customer
+                case 4: add balance
+                case 5: place an order ==>
+                 i. Cart: customer, id, product-quantity , calculate total Amount
+
+                 in the main add to cart as much as you want:
+                 Ask: Which product you want to add to your cart. For exit product selection Type: exit
+
+                 productId, productPrice, productCategoryName, product remaining stock,
+                 product getdeleveryDue date print it
+
+
+                 ==> List discounts : discount id & discount name
+                 capture discount and find compare it to the list
+                 create a method decideDiscountIsApplicableToCart()
+
+
+                 ==> create a package Order and
+                 class Order: id, orderDate, cartTotalAmount, paidAmount, discountAmount,
+                 customerId, orderStatus, productList
+
+
+
+                 ==> checkout service
+
+
+
+
+
+7.       - Buy product
+8. Write Business Logic for these menu items
