@@ -1,4 +1,5 @@
 # Project exclude paths
 java_ecommerce_project.iml
-/out/
+
 .idea
+/out/
