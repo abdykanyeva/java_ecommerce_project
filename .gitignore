@@ -1,4 +1,4 @@
 # Project exclude paths
+java_ecommerce_project.iml
 /out/
 .idea
-java_ecommerce_project.iml
