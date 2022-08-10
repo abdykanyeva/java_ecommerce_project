@@ -15,7 +15,7 @@ public class Order {
     private Double discountAmount;
     private UUID customerId;
     private String orderStatus;
-    private Set<Product> productList; // why we used set, it does not accept duplicates
+    private Set<Product> productList;
 
 
     public Order(UUID id, LocalDate orderDate, Double cartTotalAmount, Double paidAmount,

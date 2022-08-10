@@ -95,7 +95,6 @@ public class Main {
                         case 1:
                             customerBalance.additionalAmount(additionalAmount);
                             System.out.println("New Customer Balance: "+ customerBalance.getBalance());
-
                             break;
                         case 2:
                             giftBalance.additionalAmount(additionalAmount);
@@ -113,8 +112,8 @@ public class Main {
                         System.out.println("Which product you want to add to your cart. For exit product selection Type: exit");
                         for(Product product: StaticConstants.PRODUCT_LIST){
                             try {
-                                System.out.println("id: "+ product.getId() +" price: "+ product.getProductCategoryName() +
-                                      "stock: "+  product.getRemainingStock() +"product deliveryDue date: "+product.getDeliveryDueDate() );
+                                System.out.println("id: "+ product.getId() +" category name: "+ product.getProductCategoryName() +
+                                        " price: " + product.getPrice()+ " stock: "+  product.getRemainingStock() +"product deliveryDue date: "+product.getDeliveryDueDate() );
                             } catch (Exception e) {
                                 System.out.println(e.getMessage());
                             }

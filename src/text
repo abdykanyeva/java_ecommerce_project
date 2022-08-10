@@ -102,6 +102,12 @@ Rate Based Discount: discount id, name, discount rate, threshold amount, need to
 
 
                  ==> checkout service
+                 case 6: product name, product count
+
+                 case 7:
+                 print order status, amount, order date
+
+                 case 8: street name, ...
 
 
 
